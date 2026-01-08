@@ -1,0 +1,15 @@
+# Tránh đẩy các file bí mật
+**/secrets/
+**/*.key
+**/*.crt
+**/*.secret
+
+# Docker & Logs
+.DS_Store
+*.log
+.data/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
