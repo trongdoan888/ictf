@@ -4,7 +4,7 @@
 # ---- START AREA THAT CAN BE MODIFIED
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y python python-pip 
+RUN apt-get update && apt-get install -y python3-pip python python-pip 
 
 RUN pip install nclib pwntools
 # ---- END AREA THAT CAN BE MODIFIED

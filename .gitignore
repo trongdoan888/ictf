@@ -1,15 +1,16 @@
-# Tránh đẩy các file bí mật
-**/secrets/
-**/*.key
-**/*.crt
-**/*.secret
+# Môi trường ảo
+venv/
+.env
 
-# Docker & Logs
-.DS_Store
-*.log
-.data/
-
-# Python
+# Python cache
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+
+# Dữ liệu Docker & Bí mật (Cực kỳ quan trọng)
+ictf-core/database/data/
+ictf-core/database/secrets/*
+!ictf-core/database/secrets/.gitkeep
+
+# Các file tạm
+*.log
+.DS_Store

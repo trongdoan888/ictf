@@ -1,12 +1,12 @@
 FROM ictf_base
 
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get update && apt-get install -y nginx git redis-server build-essential
-RUN apt-get update && apt-get update && apt-get install -y sudo uwsgi daemon
+RUN apt-get update && apt-get update && apt-get install -y python3-pip nginx git redis-server build-essential
+RUN apt-get update && apt-get update && apt-get install -y python3-pip sudo uwsgi daemon
 
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get update && apt-get update && apt-get install -y nodejs
-RUN apt-get update && apt-get update && apt-get install -y python3-pip python3-virtualenv python3-dev uwsgi-plugin-python3 python3-setuptools python3-wheel
+RUN apt-get update && apt-get update && apt-get install -y python3-pip nodejs
+RUN apt-get update && apt-get update && apt-get install -y python3-pip python3-pip python3-virtualenv python3-dev uwsgi-plugin-python3 python3-setuptools python3-wheel
 #RUN pip install --upgrade pip
 #RUN pip --version 
 

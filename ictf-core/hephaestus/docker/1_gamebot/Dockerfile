@@ -1,7 +1,7 @@
 FROM ictf_base
 COPY ./secrets /opt/ictf/secrets
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get clean && apt-get update && apt-get install -y --no-install-recommends python3-pip python3-wheel
+RUN DEBIAN_FRONTEND=noninteractive apt-get clean && apt-get update && apt-get install -y python3-pip --no-install-recommends python3-pip python3-wheel
 
 COPY ./gamebot /opt/ictf/gamebot
 
