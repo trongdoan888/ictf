@@ -1,0 +1,16 @@
+# Môi trường ảo
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Dữ liệu Docker & Bí mật (Cực kỳ quan trọng)
+ictf-core/database/data/
+ictf-core/database/secrets/*
+!ictf-core/database/secrets/.gitkeep
+
+# Các file tạm
+*.log
+.DS_Store
