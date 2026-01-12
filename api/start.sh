@@ -1,4 +1,4 @@
 #!/bin/bash
 service nginx start
-# Gọi uwsgi bằng module python3 để vượt qua lỗi PATH
+# Chạy uwsgi trực tiếp bằng module python3 để tránh lỗi "command not found"
 uwsgi --http :5000 --manage-script-name --mount /api=app:app --enable-threads
