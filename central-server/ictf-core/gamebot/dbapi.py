@@ -80,7 +80,7 @@ class DBApi:
         return ans
 
     def __build_url(self, rel_path):
-        url = "http://%s/%s" % (self.db_host, rel_path)
+        url = "http://%s/%s" % (self.db_host, "")
         return url, self.db_secret
 
     def check_connection(self):
