@@ -5,7 +5,7 @@ def start_engine():
     while True:
         try:
             credentials = pika.PlainCredentials('ictf', 'ictf')
-            parameters = pika.ConnectionParameters('rabbitmq', credentials=credentials)
+            parameters = pika.ConnectionParameters('172.18.0.6', credentials=credentials)
             connection = pika.BlockingConnection(parameters)
             channel = connection.channel()
             channel.queue_declare(queue='service_queue', durable=True)

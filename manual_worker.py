@@ -16,7 +16,7 @@ def callback(ch, method, properties, body):
         print(f' [!] Loi: {e}')
 
 params = pika.PlainCredentials('ictf', 'ictf')
-conn = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq', credentials=params))
+conn = pika.BlockingConnection(pika.ConnectionParameters('172.18.0.6', credentials=params))
 channel = conn.channel()
 channel.queue_declare(queue='service_queue', durable=True)
 channel.basic_consume(queue='service_queue', on_message_callback=callback)
