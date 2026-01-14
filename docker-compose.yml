@@ -44,6 +44,10 @@ services:
       context: ./ictf-core
       dockerfile: hephaestus/docker/1_gamebot/Dockerfile
     container_name: ictf-gamebot
+    ports:
+      - "5000:5000"
+    volumes:
+      - /home/server/ictf-final/ictf_final_web.py:/opt/ictf/gamebot/ictf_final_web.py
     entrypoint: ["python3", "gamebot.py"]
     environment:
       - DATABASE_HOST=database.ictf
